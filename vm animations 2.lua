@@ -1,8 +1,11 @@
-local char = game.Players.LocalPlayer.Character
-local animate = char.Animate
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+
+local animate = char:WaitForChild("Animate")
 
 animate.idle.Animation1.AnimationId = "rbxassetid://616158929"
 animate.idle.Animation2.AnimationId = "rbxassetid://616160636"
+
 animate.walk.WalkAnim.AnimationId = "rbxassetid://616168032"
 animate.run.RunAnim.AnimationId = "rbxassetid://616163682"
 
